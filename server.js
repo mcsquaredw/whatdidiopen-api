@@ -9,7 +9,7 @@ const port = process.env.port || 8000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-MongoClient.connect(config.MONGODB_URL, { useNewUrlParser: true }, (err, client) => {
+MongoClient.connect(config.MONGODB_URI, { useNewUrlParser: true }, (err, client) => {
   if(err) {
     return console.log(err);
   }
